@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/aokirina/gallerie/vagrant","disabled":false}},"nfs":{"/var/www/html":{"type":"nfs","guestpath":"/var/www/html","hostpath":"/Users/aokirina/gallerie","disabled":false,"map_uid":501,"map_gid":20,"nfs_udp":true,"nfs_version":3,"uuid":"2636702890"}}}

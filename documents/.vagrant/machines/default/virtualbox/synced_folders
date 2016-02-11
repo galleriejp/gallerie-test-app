@@ -1,0 +1,1 @@
+{"nfs":{"/var/www/html":{"type":"nfs","guestpath":"/var/www/html","hostpath":"/Users/aokirina/Desktop/test-app","disabled":false,"map_uid":501,"map_gid":20,"nfs_udp":true,"nfs_version":3,"uuid":"3827889775"}},"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/aokirina/Desktop/test-app/documents","disabled":false}}}
