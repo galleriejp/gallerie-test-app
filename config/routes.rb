@@ -1,10 +1,20 @@
 Rails.application.routes.draw do
 
+  get 'article_text/new'
+
+  get 'article_heading/new'
+
+  get 'article_image/new'
+
   get 'items/new'
 
   root 'articles#index'
 
   resources :articles
+  resources :items
+  resources :article_text
+  resources :article_heading
+  resources :article_image
 
 
   # The priority is based upon order of creation: first created -> highest priority.

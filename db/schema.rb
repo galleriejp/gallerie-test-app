@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160211160617) do
+ActiveRecord::Schema.define(version: 20160211193734) do
+
+  create_table "article_headings", force: :cascade do |t|
+    t.text     "name",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "order",      limit: 4
+    t.string   "slug",       limit: 255
+  end
+
+  create_table "article_images", force: :cascade do |t|
+    t.string   "file",       limit: 255
+    t.string   "source",     limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "order",      limit: 4
+    t.string   "slug",       limit: 255
+  end
+
+  create_table "article_texts", force: :cascade do |t|
+    t.text     "content",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "order",      limit: 4
+    t.string   "slug",       limit: 255
+  end
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -23,11 +48,11 @@ ActiveRecord::Schema.define(version: 20160211160617) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.integer  "oder",       limit: 4
-    t.integer  "user_id",    limit: 4
     t.integer  "article_id", limit: 4
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "item_id",    limit: 4
+    t.string   "item_type",  limit: 255
   end
 
 end

@@ -1,0 +1,2 @@
+module ArticleTextHelper
+end
