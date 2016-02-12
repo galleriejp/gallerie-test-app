@@ -1,1 +1,11 @@
 <h1>記事一覧ページ</h1>
+
+<% @articles.each do |article| %>
+  <li>
+    <a href="/articles/<%= article.id %>" >
+      <p><%= article.title %></p>
+      <p><%= article.description %></p>
+      <p><%= article.eye_catch %></p>
+    </a>
+  </li>
+<% end %>

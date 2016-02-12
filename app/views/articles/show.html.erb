@@ -1,0 +1,27 @@
+<h1>記事詳細ページ</h1>
+
+
+
+<%= @article.title %>
+<%= @article.description %>
+<%= @article.eye_catch %>
+
+<p>以下記事アイテム</p>
+
+<% @items.each do |item| %>
+  <li>
+    <% if item.slug == "heading" %>
+      <p><%= item.name %></p>
+      <p><%= item.order %></p>
+    <% end %>
+    <% if item.slug == "image" %>
+      <p><%= item.file %></p>
+      <p><%= item.source %></p>
+      <p><%= item.order %></p>
+    <% end %>
+    <% if item.slug == "text" %>
+      <p><%= item.content %></p>
+      <p><%= item.order %></p>
+    <% end %>
+  </li>
+<% end %>

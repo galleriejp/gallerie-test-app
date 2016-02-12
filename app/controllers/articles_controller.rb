@@ -6,8 +6,13 @@ class ArticlesController < ApplicationController
     @article = Alticle.new
   end
 
+
   def index
-    @article = Article.all
+    @articles = Article.all
+  end
+
+  def show
+    @items = ArticleHeading.where(:article_id=>@article.id) + ArticleImage.where(:article_id=>@article.id) + ArticleText.where(:article_id=>@article.id)
   end
 
 
@@ -40,8 +45,6 @@ class ArticlesController < ApplicationController
 
   private
 
-  private
-
   def set_article
     @article = Article.find(params[:id])
   end
@@ -49,5 +52,6 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :eye_catch, :description, :user_id)
   end
+
 
 end
